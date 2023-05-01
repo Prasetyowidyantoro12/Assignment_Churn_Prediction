@@ -35,7 +35,7 @@
 
 **Gambar Arsitektur Data Preparation**
 
-![flow_chart_1.drawio](docs/images/flow_chart_1.drawio.png)
+![flow_chart_1.drawio](docs/docs/images/flow_chart_1.drawio.png)
 
 #### Dataset Definition
 
