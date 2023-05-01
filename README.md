@@ -105,40 +105,40 @@ Data berisi 10000 baris dan 11 kolom yaitu :
 
 **Gambar Arsitektur Exploratory Data Analysis (EDA)**
 
-![flow_chart_2.drawio](docs/images/flow_chart_2.drawio.png)    
+![flow_chart_2.drawio](docs/docs/images/flow_chart_2.drawio.png)    
 
 ## Data Preprocessing
 
 **Gambar Data Preprocessing**
 
-![flow_chart_3.drawio](docs/images/flow_chart_3.drawio.png)
+![flow_chart_3.drawio](docs/docs/images/flow_chart_3.drawio.png)
 
 ## Data Modeling
 
 **Gambar Arsitektur Data Modeling**
 
-![flow_chart_4.drawio](docs/images/flow_chart_4.drawio.png)
+![flow_chart_4.drawio](docs/docs/images/flow_chart_4.drawio.png)
 
 
 ## Machine Learning Services
 
 **Arsitektur Machine Learning Services**
 
-![flow_chart_5.drawio](docs/images/flow_chart_5.drawio.png)
+![flow_chart_5.drawio](docs/docs/images/flow_chart_5.drawio.png)
 
 Selanjutnya, setelah melalui beberapa proses dan model telah di save akan dilanjutkan pada deployment dengan menggunakan API dan Streamlit gambar dibawah ini merupakan contoh mengakses menggunakan ML Services melalui FAST API Swagger UI
 
 Berikut contoh input data yang digunakan untuk mengakses API
 
-![11_API_Swagger_UI](docs/images/11_API_Swagger_UI.png)
+![11_API_Swagger_UI](docs/docs/images/11_API_Swagger_UI.png)
 
 Berikut hasil output prediksi dari API services
 
-![12_Output_API](docs/images/12_Output_API.png)
+![12_Output_API](docs/docs/images/12_Output_API.png)
 
 Agar lebih ramah dalam menggunakannya dan tampilannya lebih powerfull, user disuguhkan dengan apps sederhana yang dibangun dengan menggunakan streamlit services, berikut contoh penggunaannya
 
-![13_UI_Streamlit](docs/images/13_UI_Streamlit.png)
+![13_UI_Streamlit](docs/docs/images/13_UI_Streamlit.png)
 
 User diharapkan mengisi form yang sudah disediakan hingga selesai, jika terdapat kesalahan range dalam input data streamlit akan menampilkan error dibagian mana yang inputnya salah, jika dirasa sudah sesuai kriteria maka klik tombol `predict` dan akan mengelarkan hasil `Prediction Result: Class 0 = Customer stay` dan `Class 1 = Customer churn`
 
