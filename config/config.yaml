@@ -1,0 +1,148 @@
+ # Path related
+raw_dataset_dir: dataset/1 - raw data/
+train_set_path:
+- dataset/2 - processed/X_train.pkl
+- dataset/2 - processed/y_train.pkl
+valid_set_path:
+- dataset/2 - processed/X_valid.pkl
+- dataset/2 - processed/y_valid.pkl
+test_set_path:
+- dataset/2 - processed/X_test.pkl
+- dataset/2 - processed/y_test.pkl
+train_feng_set_path:
+- dataset/2 - processed/X_train_feng.pkl
+- dataset/2 - processed/y_train_feng.pkl
+valid_feng_set_path:
+- dataset/2 - processed/X_valid_feng.pkl
+- dataset/2 - processed/y_valid_feng.pkl
+test_feng_set_path:
+- dataset/2 - processed/X_test_feng.pkl
+- dataset/2 - processed/y_test_feng.pkl
+impute_data_train:
+- dataset/2 - processed/X_train_impute.pkl
+- dataset/2 - processed/y_test_impute.pkl
+impute_data_test:
+- dataset/2 - processed/X_test_impute.pkl
+- dataset/2 - processed/y_test_impute.pkl
+impute_data_valid:
+- dataset/2 - processed/X_valid_impute.pkl
+- dataset/2 - processed/y_valid_impute.pkl
+
+#Encode - One Hot Encoding dan Balancing Data
+train_ohe_balance:
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/X_train_ohebalance.pkl
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/y_train_ohebalance.pkl
+#valid tidak dibalancing hanya di encode
+valid_ohe_balance:
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/x_valid_feng.pkl
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/y_valid_feng.pkl
+#test tidak dibalancing hanya di encode
+test_ohe_balance:
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/x_test_feng.pkl
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/y_test_feng.pkl
+rus_ohe_balance:
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/x_rus.pkl
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/y_rus.pkl
+sm_ohe_balance:
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/x_sm.pkl
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/y_sm.pkl
+ros_ohe_balance:
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/x_ros.pkl
+- dataset/3 - final/1 - Encode - One Hot Encoding dan Balancing Data/y_ros.pkl
+
+#Standar Scaler
+standar_scaler_train:
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/X_train_clean.pkl
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/y_train.pkl
+standar_scaler_valid:
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/X_valid_clean.pkl
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/y_valid.pkl
+standar_scaler_test:
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/X_test_clean.pkl
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/y_test.pkl
+standar_scaler_rus:
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/X_rus_clean.pkl
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/y_rus.pkl
+standar_scaler_ros:
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/X_ros_clean.pkl
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/y_ros.pkl
+standar_scaler_sm:
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/X_sm_clean.pkl
+- dataset/3 - final/2 - Scaling Data - Standart Scaler/y_sm.pkl
+
+raw_dataset_path: dataset/processed/Churn_Modelling.csv
+cleaned_raw_dataset_path: dataset/2 - processed/data_bank.pkl
+production_model_path: model/5 - Model Final
+ohe_stasiun_path: model/5 - Model Final/ohe_stasiun.pkl
+le_encoder_path: model/5 - Model Final/le_encoder.pkl
+model_scaler: model/5 - Model Final/scaler.pkl
+scaler: model/5 - Model Final/
+model_final: model/5 - Model Final/xgboost_cv.pkl
+
+# Debug related
+print_debug: true
+
+# Columns by data type related
+int64_columns:
+- CreditScore
+- Age
+- Tenure
+- NumOfProducts
+- HasCrCard
+- IsActiveMember
+float64_columns:
+- Balance
+- EstimatedSalary
+object_columns:
+- Geography
+- Gender
+
+# Predictors and label related
+label: Exited
+predictors:
+- CreditScore
+- Geography
+- Gender
+- Age
+- Tenure
+- Balance
+- NumOfProducts
+- HasCrCard
+- IsActiveMember
+- EstimatedSalary
+
+# Range of data related
+range_Geography:
+- France
+- Spain
+- Germany
+range_Gender:
+- Female
+- Male
+range_CreditScore:
+- 350
+- 850
+range_Age:
+- 18
+- 92
+range_Tenure:
+- 0
+- 10
+range_Balance:
+- 0
+- 250898.09
+range_NumOfProducts:
+- 1
+- 4
+range_IsActiveMember:
+- 0
+- 1
+range_EstimatedSalary:
+- 11.58
+- 199992.48
+range_HasCrCard:
+- 0
+- 1
+Exited_categories:
+- 0
+- 1

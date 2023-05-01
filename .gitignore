@@ -1,0 +1,7 @@
+myvenv/
+/myenv/
+/myenv
+*.ipynb_checkpoints
+*__pycache__
+dataset/2 - processed/
+

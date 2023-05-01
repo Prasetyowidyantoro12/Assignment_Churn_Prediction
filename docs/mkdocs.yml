@@ -1,0 +1,9 @@
+site_name: Home - Churn Prediction for Bank Customers Using Machine Learning
+site_description: Prediksi Customer Churn pada Bank
+site_author: Prasetyo Widyantoro
+copyright: Prasetyowidyantoro12@2023
+nav:
+  - DOKUMENTASI: index.md
+  - TENTANG SAYA: about.md
+theme: 
+  name: readthedocs
