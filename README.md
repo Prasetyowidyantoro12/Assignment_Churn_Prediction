@@ -1,9 +1,8 @@
 # Churn Prediction for Bank Customers Using Machine Learning 
 
+- `Link Dokumentasi` : https://prasetyowidyantoro12.github.io/Assignment_Churn_Prediction/
 - `Link Medium` : https://medium.com/@prasetyow938/churn-prediction-for-bank-customers-using-machine-learning-45f604e86dc0
 - `Link Youtube` : -
-
-**Selengkapnya dapat diakses pada laman** `docs`
 
 ## Cara menjalankan Script Dilokal
 
@@ -12,23 +11,23 @@
 - clone repository github ini
 - instalasi virtual environment
 - aktifkan virtual environment yang telah dibuat
-- install requirements.txt dengan cara "pip install -r requirements.txt"
+- install requirements.txt dengan cara `pip install -r requirements.txt`
 - file sudah dikonfigurasi, lanjutkan step dibawah ini sesuai dengan keinginan
 
 ### Cara Menjalankan API
 
 - Pastikan masuk ke folder utama program
-- ketik - "uvicorn src.api:app --reload"
+- ketik - `uvicorn src.api:app --reload`
 - lalu akan dirujuk pada laman `http://127.0.0.1:8000`
 
 ### Cara Menjalankan Streamlit
 - Pastikan masuk ke folder utama program
-- ketik - "streamlit run src/streamlit.py"
+- ketik - `streamlit run src/streamlit.py`
 - lalu akan diarahkan pada tampilan UI streamlit pada laman `http://localhost:8501/`
 
 ### Cara serve MkDocs
 - Pastikan sudah berada didalam folder docs
-- ketik - mkdocs serve --dev-addr=127.0.0.1:8080
+- ketik - `mkdocs serve --dev-addr=127.0.0.1:8080`
 - lalu laman dokumen akan muncul pada laman `http://127.0.0.1:8080`
 
 ##  Data Preparation
