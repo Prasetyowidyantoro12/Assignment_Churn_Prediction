@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Prediksi Customer Churn pada Bank" /><meta name="author" content="Prasetyo Widyantoro" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Home - Churn Prediction for Bank Customers Using Machine Learning</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DOKUMENTASI";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Home - Churn Prediction for Bank Customers Using Machine Learning
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">DOKUMENTASI</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#business-problem">Business Problem</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#business-objective">Business Objective</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#business-metrics">Business Metrics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-solution">Machine Learning Solution</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-metrics">Machine Learning Metrics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#literature-review">Literature Review</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alur-transformasi-data">Alur Transformasi Data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#data-preparation">Data Preparation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#dataset-definition">Dataset Definition</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#check-skewed-data">Check Skewed Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#distribusi-data">Distribusi Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#check-proporsi-data">Check Proporsi Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#check-korelasi-data">Check Korelasi Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#outlier-detection">Outlier Detection</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#kesimpulan-explolatory-data-analysis">Kesimpulan Explolatory Data Analysis</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-preprocessing">Data Preprocessing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-modeling">Data Modeling</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-services">Machine Learning Services</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#kesimpulan">Kesimpulan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referensi">Referensi</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="about/">TENTANG SAYA</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Home - Churn Prediction for Bank Customers Using Machine Learning</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>DOKUMENTASI</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="churn-prediction-for-bank-customers-using-machine-learning">Churn Prediction for Bank Customers Using Machine Learning</h1>
+<h2 id="business-problem">Business Problem</h2>
+<p><strong>Churn Prediction for Bank Customers Using Machine Learning</strong> merupakan tindakan bagaimana mengidentifikasi pelanggan bank yang cenderung beralih ke bank lain sehingga bank dapat mengambil tindakan yang tepat untuk mempertahankan pelanggan. Dengan menggunakan Machine Learning, bank dapat mengambil pendekatan yang lebih proaktif dan mengurangi biaya akuisisi pelanggan baru dengan mempertahankan pelanggan yang sudah ada. Oleh karena itu, pengembangan model prediksi churn yang akurat dan andal mampu membantu bank dalam <strong>mengurangi churn rate dan meningkatkan retensi pelanggan</strong>.</p>
+<h2 id="business-objective">Business Objective</h2>
+<p>Objektif bisnis dari <strong>Churn Prediction for Bank Customers Using Machine Learning</strong> adalah untuk membantu bank mengidentifikasi pelanggan yang berpotensi meninggalkan layanan dan mengembangkan strategi retensi yang efektif, sehingga dapat mempertahankan pelanggan dan meningkatkan loyalitas pelanggan secara keseluruhan. Dengan memprediksi kemungkinan churn, bank dapat mengambil tindakan yang diperlukan untuk mempertahankan pelanggan yang bernilai dan meningkatkan kepuasan pelanggan.</p>
+<h2 id="business-metrics">Business Metrics</h2>
+<p><strong><code>Churn Rate</code></strong>  : mereduksi persentase jumlah pelanggan yang berhenti berlangganan layanan bank dalam periode tertentu.</p>
+<h2 id="machine-learning-solution">Machine Learning Solution</h2>
+<p><strong>Machine Learning Solution</strong> Churn Prediction for Bank Customers Using Machine Learning adalah mengembangkan model prediksi churn menggunakan algoritma machine learning <strong>XGBoost</strong>, dengan melakukan preprocessing data dan feature engineering terlebih dahulu, kemudian melakukan tuning hyperparameter untuk mendapatkan model yang terbaik. Setelah itu, model tersebut dapat digunakan untuk memprediksi kemungkinan churn pada nasabah bank atau memprediksi kelas <strong>0 untuk stay dan kelas 1 untuk churn</strong>, sehingga bank dapat mengambil tindakan pencegahan yang tepat untuk mempertahankan nasabah dan meningkatkan retention rate. Selain itu, monitoring kinerja model dan perbaikan terus-menerus juga perlu dilakukan untuk memastikan model tetap akurat dan relevan dengan kondisi pasar yang selalu berubah.</p>
+<h2 id="machine-learning-metrics">Machine Learning Metrics</h2>
+<p><strong>Churn Prediction for Bank Customers</strong> merupakan perangkat analisa data untuk mengetahui nasabah yang churn berdasarkan profile nasabah bank yang telah tersedia.</p>
+<p>Kumpulan data ini berisi rincian nasabah bank dan variabel target adalah variabel biner (stay and churn) yang mencerminkan fakta apakah nasabah meninggalkan bank (menutup rekeningnya) atau tetap menjadi nasabah suatu bank. variabel fitur akan diproses guna memprediksi apakah nasabah akan menutup rekening atau tidak</p>
+<p>User menginginkan metrics bisnis berupa <code>recall</code> yakni lebih mengutamakan memprediksi churn namun sebenarnya tidak churn daripada memprediksi nasabah tidak churn sebenarnya nasabah tersebut churn, hal ini menunjukkan bahwa metode yang digunakan akan <strong>memperkecil nilai True Negative (TN) dan False Negative (FN), dan menaikkan TP (TP) dan False Positive (FP)</strong>.</p>
+<p>Namun pada eksplorasi kali ini <code>Churn Prediction for Bank Customers</code> akan menampilkan beberapa metrics sebagai berikut:</p>
+<ol>
+<li><strong>Accuracy</strong>: metrik yang paling umum digunakan untuk mengukur seberapa
+    akurat model dalam memprediksi kelas target. Accuracy dihitung
+    sebagai rasio antara jumlah prediksi benar dengan jumlah total
+    prediksi.</li>
+<li><strong>Precision</strong>: metrik yang mengukur seberapa banyak dari kelas yang
+    diprediksi sebagai positif yang benar-benar positif. Precision
+    dihitung sebagai rasio antara jumlah True Positives dengan jumlah
+    True Positives dan False Positives.</li>
+<li><strong>Recall</strong>: metrik yang mengukur seberapa banyak dari kelas positif yang
+    benar-benar terdeteksi oleh model. Recall dihitung sebagai rasio
+    antara jumlah True Positives dengan jumlah True Positives dan False
+    Negatives.</li>
+<li><strong>F1 Score</strong>: merupakan harmonic mean dari Precision dan Recall. F1
+    score memberikan kesimbangan antara Precision dan Recall dan
+    digunakan untuk membandingkan kinerja model dengan metrik gabungan.</li>
+<li><strong>ROC-AUC</strong>: Kurva Karakteristik Operasi Penerima (ROC) dan area di
+    bawah kurva (AUC) digunakan untuk mengevaluasi kinerja model dengan
+    menghitung rasio True Positive Rate (TPR) dan False Positive Rate
+    (FPR). ROC-AUC memberikan nilai keseluruhan kinerja model dan
+    digunakan untuk membandingkan beberapa model yang berbeda.</li>
+</ol>
+<h2 id="literature-review">Literature Review</h2>
+<ol>
+<li>emalata Jain  mengusulkan dua teknik machine learning untuk memprediksi churn pelanggan seperti Logistic Regression dan Logit Boost. 
+instance memiliki 20 atribut. Percobaan mengungkapkan bahwa tidak banyak perbedaan hasil dari kedua teknik tersebut. 
+Logistic Regression memiliki akurasi sebesar 85,2384%, sedangkan Logit Boost memiliki akurasi 85,1785%. (Helmata jain, 2020)</li>
+<li>Nurul Izzati Mohammad mengusulkan untuk mengidentifikasi faktor-faktor yang mempengaruhi
+churn pelanggan dan mengembangkan model prediksi churn yang efektif serta
+memberikan analisis terbaik dari hasil visualisasi data. Kumpulan data dari kaggle terbuka
+situs data. Ada tiga pengklasifikasi pembelajaran mesin seperti Logistic Regression
+, ANN dan Random Forest digunakan. Hasil percobaan dengan tinggi
+akurasi 85%. Pengklasifikasi Logistic Regression menunjukkan hasil terbaik (Muhammad, Nurul &amp; Ismail, S.A. &amp; Kama, Mohd &amp; Mohd Yusop, Othman &amp; Azmi, Azri, 2019)</li>
+<li>Praveen Lalwani et al  mengusulkan proses prediksi menggunakan yang paling populer
+memprediksi model yaitu, Logistic Regression, Naïve Bayes, Support Vector
+Machine, Random Forest, Decision Tree, dll. di set kereta dan juga di boosting.
+Hasil percobaan menunjukkan bahwa pengklasifikasi AdaBoost dan XGBoost memberikan
+akurasi maksimal 81,71% dan 80,80%.</li>
+</ol>
+<h2 id="alur-transformasi-data">Alur Transformasi Data</h2>
+<h3 id="data-preparation">Data Preparation</h3>
+<p><strong>Gambar Arsitektur Data Preparation</strong>
+<img alt="flow_chart_1.drawio" src="images/flow_chart_1.drawio.png" /></p>
+<h4 id="dataset-definition">Dataset Definition</h4>
+<p>Data yang digunakan merupakan data yang menggambarkan profile nasabah yang menutup rekening dan nasabah yang tetap. adapun fitur profile nasabah yang digunakan antara lain.
+Data disadur dari laman</p>
+<p><a href="https://www.kaggle.com/datasets/shantanudhakadd/bank-customer-churn-prediction">https://www.kaggle.com/datasets/shantanudhakadd/bank-customer-churn-prediction</a></p>
+<p>Data berisi 10000 baris dan 11 kolom yaitu :</p>
+<p><strong>CreditScore       :
+    [int64]
+    [350 - 850]
+    Skor Kredit yang diukur oleh pihak bank sebagai penilaian terhadap nasabah untuk menggambarkan  risiko kredit seorang calon debitur</strong></p>
+<p><strong>Geography         :
+    [object]
+    ['France', 'Spain', 'Germany']
+    Negara asal nasabah</strong></p>
+<p><strong>Gender            :
+    [object]
+    ['male','female']
+    Jenis Kelamin nasabah</strong></p>
+<p><strong>Age               :
+    [int64]
+    [18 - 92]
+    Jenis Kelamin nasabah</strong></p>
+<p><strong>Tenure            :
+    [int64]
+    [0 - 10]
+    Jumlah tahun kepesertaan nasabah</strong></p>
+<p><strong>Balance            :
+    [float64]
+    [0.0 - 250898.09]
+    Saldo bank nasabah</strong></p>
+<p><strong>NumOfProducts      :
+    [int64]
+    [1, 3, 2, 4]
+    Jumlah produk bank yang digunakan nasabah</strong></p>
+<p><strong>HasCrCard           :
+    [int64]
+    [0 - 1]
+    apakah nasabah memegang kartu kredit dengan bank atau tidak</strong>.</p>
+<p><strong> IsActiveMember      :
+  [int64]
+  [0 - 1]
+  apakah nasabah adalah anggota aktif di bank atau tidak. </strong></p>
+<p><strong>EstimatedSalary     :
+    [float64]
+    [11.58 - 199992.48]
+    Perkiraan gaji nasabah dalam Dolar</strong></p>
+<p><strong>Exited              :
+    [int64]
+    [0,1]
+    1 jika nasabah menutup rekening dengan bank dan 0 jika nasabah dipertahankan.</strong></p>
+<h3 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h3>
+<p><strong> Gambar Arsitektur Exploratory Data Analysis (EDA) </strong>
+<img alt="flow_chart_2.drawio" src="images/flow_chart_2.drawio.png" /></p>
+<h4 id="check-skewed-data">Check Skewed Data</h4>
+<p><strong>Gambar Check Skewed Data</strong></p>
+<p><img alt="1_skewed" src="images/1_skewed.png" /></p>
+<p>Rules :</p>
+<ul>
+<li>jika kolom mendapati skewnya sebesar &gt; +- 0.5, maka dari itu kolom tersebut akan diimputasi dengan median</li>
+<li>jika kolom mendapati skewnya sebesar &lt;= +- 0.5 kolom lainnya akan diimputasi dengan mean</li>
+</ul>
+<p>Imputasi Median :</p>
+<ul>
+<li>Age</li>
+</ul>
+<p>Imputasi Mean :</p>
+<ul>
+<li>CreditScore</li>
+<li>Balance</li>
+<li>EstimatedSalary</li>
+</ul>
+<p>Imputasi untuk data kategorikal ialah menggunakan modus Imputasi untuk data numerikal ialah median dan mean tergantung skewed yang sudah dijelaskan diatas karena masing-masing memiliki kelas 0 dan 1 tidak terpaut jauh dan tidak menggunakan kelas.</p>
+<h4 id="distribusi-data">Distribusi Data</h4>
+<p>Visualisasi menggunakan kdeplot diatas menghasilkan bentuk distribusi data masing-masing kolom dengan garis merah sebagai garis mean dari kolom data dan warna hijau sebagai garis median dari kolom data.</p>
+<p><strong>Gambar Distribusi Data</strong>
+<img alt="2_plot_distibusi_data" src="images/2_plot_distibusi_data.png" /></p>
+<ul>
+<li>
+<p>CreditScore memiliki data dalam bentuk normal distribution</p>
+</li>
+<li>
+<p>Age memiliki data dalam bentuk right skewed distribution</p>
+</li>
+<li>
+<p>EstimatedSalary memilikii data dalam bentuk uniform distribution</p>
+</li>
+<li>
+<p>Balance memiliki data dalam bentuk bimodal distribution</p>
+</li>
+</ul>
+<h4 id="check-proporsi-data">Check Proporsi Data</h4>
+<p><strong>Gambar Proporsi Data</strong>
+<img alt="3_Komparasi_stay_exited" src="images/3_Komparasi_stay_exited.png" /></p>
+<p>Berdasarkan persentase label stay dan exited menyatakan ketidakseimbangan label, untuk user yang stay memiliki porsi <code>79.5%</code> sedangkan user Exited memiliki porsi <code>20.5%</code></p>
+<h4 id="check-korelasi-data">Check Korelasi Data</h4>
+<p><strong>Gambar Check Korelasi Data</strong>
+<img alt="4_corelation" src="images/4_corelation.png" /></p>
+<p>Jika dilihat dari hasil cek korelasi diatas antar variabel tidak memiliki korelasi yang positif kuat, dan yang memiliki korelasi positif tertinggi hanya memiliki poin 0.28 yakni antara Age dan Exited</p>
+<h4 id="outlier-detection">Outlier Detection</h4>
+<p><strong>Gambar Outlier Detection</strong>
+<img alt="5_oulier_detection" src="images/5_oulier_detection.png" /></p>
+<p>Memang pada hasil ploting diatas memiliki titik titik outlier yang cukup banyak yang berada pada kolom CreditScore dan Age, namun setelah melakukan validasi ulang, user menyatakan bahwa data tersebut normal terjadi.</p>
+<h4 id="kesimpulan-explolatory-data-analysis">Kesimpulan Explolatory Data Analysis</h4>
+<ol>
+<li>
+<p>Data yang tidak diperuntukan untuk pemodelan dan eda akan  langsung di drop pada data preparation yakni kolom "RowNumber","CustomerId","Surname".</p>
+</li>
+<li>
+<p>Skewed pada data numerical menyatakan bahwa untuk kolom Age akan dilakukan imputasi dengan metode median dan untuk kolom CreditScore, Balance, EstimatedSalary menggunakan metode mean dan data kategorikal diputuskan untuk menggunakan modus untuk metode imputasinya dan tidak menggunakan kelas</p>
+</li>
+<li>
+<p>Distribusi Data kategorikal, CreditScore memiliki data dalam bentuk normal distribution, Age memiliki data dalam bentuk right skewed distribution, EstimatedSalary memilikii data dalam bentuk uniform distribution, Balance memiliki data dalam bentuk bimodal distribution.</p>
+</li>
+<li>
+<p>Data Imbalance, maka perlu dilakukan balancing data untuk menyeimbangkan label target.</p>
+</li>
+<li>
+<p>Outlier Detection, memang terdapat titik yang menggambarkan oulier, namun data tersebut dirasa normal terjadi.</p>
+</li>
+</ol>
+<h3 id="data-preprocessing">Data Preprocessing</h3>
+<p><strong> Gambar Data Preprocessing </strong>*
+<img alt="flow_chart_3.drawio" src="images/flow_chart_3.drawio.png" /></p>
+<p>Setelah mendapatkan mandat dari hasil eksplorasi data diatas maka dilakukan implementasi pada data preprocessing antara lain</p>
+<ol>
+<li>
+<p>Handling Missing Value dengan kolom Age akan dilakukan imputasi dengan metode median dan untuk kolom CreditScore, Balance, EstimatedSalary menggunakan metode mean dan data kategorikal diputuskan untuk menggunakan modus untuk metode imputasinya dan tidak menggunakan kelas</p>
+</li>
+<li>
+<p>Get Dummies pada Kolom Geography dan Gender</p>
+</li>
+</ol>
+<p><strong>Gambar Get Dummies</strong>
+<img alt="5_oulier_detection" src="images/5_oulier_detection.png" /></p>
+<p>Setelah melakukan get dummies pada data terlihat kolom Gender dan Geography sudah berubah bentuk menjadi get_dummies</p>
+<ol>
+<li>
+<p>Balancing Data dengan menggunakan metode SMOTE
+<strong>Gambar Balancing Data</strong>
+<img alt="7_komparasi_stay_exited_smote" src="images/7_komparasi_stay_exited_smote.png" />
+Setelah melakukan balancing data terlihat bahwa label pada kolom Exited menjadi seimbang yakni dengan proporsi 50% untuk kelas 0 dan 50% untuk kelas 1</p>
+</li>
+<li>
+<p>Dan melakukan scaling data pada kolom "CreditScore", "Age", "Tenure", "EstimatedSalary", "Balance"
+<strong>Gambar Data Scaling</strong>
+<img alt="8_Scaler" src="images/8_Scaler.png" />
+Dapat dilihat bahwa data sudah dilakukan scaling dengan menggunakan standarscaler</p>
+</li>
+<li>
+<p>Sorted Column untuk melakukan defense urutan column
+<strong>Gambar Sorted Columns</strong>
+<img alt="8_Sorted_Data" src="images/8_Sorted_Data.png" /></p>
+</li>
+<li>
+<p>Data Clean, siap untuk dilanjutkan pada tahap pemodelan</p>
+</li>
+</ol>
+<h3 id="data-modeling">Data Modeling</h3>
+<p><strong>Gambar Arsitektur Data Modeling</strong></p>
+<p><img alt="flow_chart_4.drawio" src="images/flow_chart_4.drawio.png" /></p>
+<ol>
+<li>
+<p>Setelah melakukan Data Preprocessing, hasilnya akan dilakukan pemodelan agar bisa memprediksi nasabah stay atau exited</p>
+</li>
+<li>
+<p>Pemodelan Binary Classification akan menggunakan metode Xgboost</p>
+</li>
+</ol>
+<p>XGBoost (Extreme Gradient Boosting) merupakan salah satu algoritma machine learning yang cukup populer untuk melakukan prediksi pada tugas-tugas seperti binary classification, regression, dan ranking. Algoritma XGBoost adalah implementasi dari teknik Gradient Boosting Decision Trees (GBDT) yang merupakan ensemble learning method, yaitu gabungan dari beberapa model kecil untuk membentuk satu model besar yang lebih akurat.</p>
+<p>Secara umum, algoritma XGBoost pada binary classification bekerja dengan cara membangun beberapa decision tree secara sekuensial, dimana setiap tree akan memperbaiki hasil prediksi dari tree sebelumnya. Untuk mengukur perbedaan antara hasil prediksi aktual dan hasil prediksi dari model, XGBoost menggunakan loss function yang digunakan dalam model GBDT, yaitu berupa penjumlahan dari squared error loss function dan regulerisasi L1 dan L2 pada tiap tree.</p>
+<p>Rumus matematis untuk training objective pada binary classification dengan XGBoost adalah:</p>
+<p><img alt="9_xgboost_rumus.png" src="images/9_xgboost_rumus.png" /></p>
+<p>Selama proses training, XGBoost akan melakukan optimasi terhadap objective function menggunakan teknik gradient descent. Setiap tree yang ditambahkan pada model, akan membantu memperbaiki prediksi dari tree sebelumnya dengan menambahkan residual error dari iterasi sebelumnya pada setiap label target. Pada akhir iterasi, XGBoost akan menghasilkan prediksi final berupa probabilitas untuk masing-masing label pada data testing.</p>
+<p>Best Parameter dan Evaluation Metrics</p>
+<p><img alt="9_Best_Parameter_Valid_Test_Score" src="images/9_Best_Parameter_Valid_Test_Score.png" /></p>
+<p>Hasil pemodelan dengan menggunakan tunning parameter Xgboost ialah sebagai berikut dan skor accuracy yang dihasilkan pada data valid dan test dirasa cukup baik.</p>
+<p>Best hyperparameters: {'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.7}
+Validation accuracy: 0.8613333333333333
+Test accuracy: 0.8686666666666667</p>
+<p>dan berikut hasil dari classification report dari pemodelan diatas
+<img alt="9_Classification_Report" src="images/9_Classification_Report.png" /></p>
+<p>Berdasarkan hasil Classification report diatas Recall pada classification report merupakan salah satu metrik evaluasi klasifikasi yang mengukur seberapa baik model dalam mengidentifikasi kelas positif atau kelas minoritas. Pada laporan di atas, recall untuk kelas 0 adalah 0.94 dan recall untuk kelas 1 adalah 0.60. Ini berarti model memiliki kinerja yang lebih baik dalam mengidentifikasi kelas mayoritas (0) daripada kelas minoritas (1). Dalam konteks bisnis, ini dapat berarti bahwa model kurang sensitif dalam mengidentifikasi kasus kelas minoritas, sehingga dapat mengabaikan pelanggan yang berpotensi keluar dari bisnis. Oleh karena itu, dalam kasus ini, perlu diperhatikan meningkatkan recall untuk kelas minoritas agar model dapat mengidentifikasi pelanggan yang berpotensi keluar lebih baik.</p>
+<p>dan berikut hasil ROC dan AUC model XGboost yang digunakan untuk pemodelan kali ini
+<img alt="9_roc_auc" src="images/9_roc_auc.png" /></p>
+<p>AUC (Area Under the Curve) adalah metrik evaluasi yang digunakan untuk mengukur kinerja model klasifikasi biner. Nilai AUC menunjukkan seberapa baik model dapat membedakan antara kelas positif dan negatif.</p>
+<p>AUC memiliki rentang nilai antara 0 hingga 1, dimana semakin tinggi nilai AUC, semakin baik kinerja model dalam membedakan antara kelas positif dan negatif. Dalam kasus ini, nilai AUC sebesar 0.8643 menunjukkan bahwa model memiliki kinerja yang baik dalam membedakan antara kelas positif dan negatif.</p>
+<h2 id="machine-learning-services">Machine Learning Services</h2>
+<p><strong> Arsitektur Machine Learning Services </strong>
+<img alt="flow_chart_5.drawio" src="images/flow_chart_5.drawio.png" /></p>
+<p>Selanjutnya, setelah melalui beberapa proses dan model telah di save akan dilanjutkan pada deployment dengan menggunakan API dan Streamlit gambar dibawah ini merupakan contoh mengakses menggunakan ML Services melalui FAST API Swagger UI</p>
+<p>Berikut contoh input data yang digunakan untuk mengakses API</p>
+<p><img alt="11_API_Swagger_UI" src="images/11_API_Swagger_UI.png" /></p>
+<p>Berikut hasil output prediksi dari API services</p>
+<p><img alt="12_Output_API" src="images/12_Output_API.png" /></p>
+<p>Agar lebih ramah dalam menggunakannya dan tampilannya lebih powerfull, user disuguhkan dengan apps sederhana yang dibangun dengan menggunakan streamlit services, berikut contoh penggunaannya</p>
+<p><img alt="13_UI_Streamlit" src="images/13_UI_Streamlit.png" /></p>
+<p>User diharapkan mengisi form yang sudah disediakan hingga selesai, jika terdapat kesalahan range dalam input data streamlit akan menampilkan error dibagian mana yang inputnya salah, jika dirasa sudah sesuai kriteria maka klik tombol <code>predict</code> dan akan mengelarkan hasil <code>Prediction Result: Class 0 = Customer stay</code> dan <code>Class 1 = Customer churn</code></p>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<ol>
+<li>Model machine learning dengan menggunakan Xgboost sudah cukup memberikan hasil yang cukup baik dalam pemodelan dibuktikan dengan nilai Validation accuracy: 0.8613333333333333
+Test accuracy: 0.8686666666666667 dan recall untuk kelas 0 adalah 0.94 dan recall untuk kelas 1 adalah 0.60. Ini berarti model memiliki kinerja yang lebih baik dalam mengidentifikasi kelas mayoritas (0) daripada kelas minoritas (1) dan Dalam kasus ini, nilai AUC sebesar 0.8643 menunjukkan bahwa model memiliki kinerja yang baik dalam membedakan antara kelas positif dan negatif hal ini sesuai dengan machine learning metrics yang sudah didefinisikan</li>
+<li>For Future Works, lebih banyak variabel yang dilakukan pemodelan untuk memodelkan seseorang yang churn dan stay, dan lebih banyak percobaan atau riset terkait cara meningkatkan nilai recall yang jauh lebih tinggi</li>
+</ol>
+<h2 id="referensi">Referensi</h2>
+<ul>
+<li>Mahalekshmi, A., &amp; Chellam, G. H. (2022). Analysis of customer churn prediction using machine 
+learning and deep learning algorithms. International Journal of Health Sciences, 6(S1), 11684²11693. 
+Jain H, (2021) Machine Learning Models Developed For Telecom Churn Prediction J Comput Eng Inf Technol 10:2 DOI: 10.37532/jceit.2021.10(2).251.</li>
+<li>Muhammad, Nurul &amp; Ismail, S.A. &amp; Kama, Mohd &amp; Mohd Yusop, Othman &amp; Azmi, Azri. (2019). Customer Churn Prediction In Telecommunication Industry Using Machine Learning Classifiers. 1-7. 10.1145/3387168.3387219. </li>
+<li>
+<p>Lalwani, P., Mishra, M.K., Chadha, J.S. et al. Customer churn prediction system: a machine learning approach. Computing 104, 271–294 (2022). https://doi.org/10.1007/s00607-021-00908-y</p>
+</li>
+<li>
+<p>Materi Pacmann</p>
+</li>
+<li>https://towardsdatascience.com/step-by-step-approach-to-build-your-machine-learning-api-using-fast-api-21bd32f2bbdb</li>
+<li>https://engineering.rappi.com/using-fastapi-to-deploy-machine-learning-models-cd5ed7219ea</li>
+<li>https://towardsdatascience.com/xgboost-theory-and-practice-fb8912930ad6</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="about/" class="btn btn-neutral float-right" title="TENTANG SAYA">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Prasetyowidyantoro12@2023</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-05-02 01:15:07.014908+00:00
+-->
