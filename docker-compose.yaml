@@ -1,4 +1,4 @@
-name: Churn_Prediction
+name: churn_prediction
 services:
   streamlit:
     build: docker/streamlit
