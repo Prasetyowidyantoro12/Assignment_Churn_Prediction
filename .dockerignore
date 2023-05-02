@@ -3,12 +3,11 @@
 __pycache__/
 data/
 docker/
-log/
-notebooks/
-venv_api/
-venv_linux/
-venv_streamlit/
-venv_win/
+training_log/
+notebook_eksperimen/
+myvenv/
+/myenv/
+/myenv
 *.ipynb
 Dockerfile
 docker-compose.yaml
